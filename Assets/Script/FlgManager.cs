@@ -13,10 +13,12 @@ public class FlgManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            Debug.Log("インスタンス成功");
             DontDestroyOnLoad(gameObject);//シーンをまたいでもインスタンスを保持できる
         }
         else
         {
+            Debug.Log("インスタンス失敗");
             Destroy(gameObject);//既にインスタンスが存在する場合は新しいインスタンスを破棄
         }
     }

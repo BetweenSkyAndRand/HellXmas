@@ -17,7 +17,7 @@ public class BlockContorroler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.back * 5 * Time.deltaTime;
+        transform.position += Vector3.back * 5*Time.deltaTime;
         //if(this.transform.position.z<=-30)
         //{
         //    Destroy(this.gameObject);
@@ -25,7 +25,6 @@ public class BlockContorroler : MonoBehaviour
         if (this.transform.position.z <= -30)
         {
             Destroy(this.gameObject);
-            FlgManager.instance.BlockApeearOFF();
         }
 
     }

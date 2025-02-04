@@ -16,4 +16,15 @@ public class BlockCollision : MonoBehaviour
     {
         
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (FlgManager.instance.IsBlockApear())
+        {
+            FlgManager.instance.BlockApeearOFF();
+        }
+        else
+        {
+            Debug.Log("ブロック出現中");
+        }
+    }
 }
